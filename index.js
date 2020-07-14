@@ -18,16 +18,15 @@ const debounce = (callback, wait = 30, immediate = true) => {
 function checkSlide(e) {
   document.querySelectorAll('.slide-in').forEach((article) => {
     const slideInAt =
-      window.scrollY + window.innerHeight - article.offsetHeight / 2
-    // // bottom of elm
-    const elmBottom = article.offsetTop + article.offsetHeight
-    const isHalfShown = slideInAt > article.offsetTop
-    const isNotScrolledPast = window.scrollY < elmBottom
+        window.scrollY + window.innerHeight - article.offsetHeight / 2,
+      elmBottom = article.offsetTop + article.offsetHeight,
+      isHalfShown = slideInAt > article.offsetTop,
+      isNotScrolledPast = window.scrollY < elmBottom
     if (isHalfShown && isNotScrolledPast) {
-      console.log('hit slide in')
+      // console.log('hit slide in'')
       article.classList.add('active')
     } else {
-      console.log('hit slide out')
+      // console.log('hit slide out')
       article.classList.remove('active')
     }
   })
