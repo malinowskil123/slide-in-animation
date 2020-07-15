@@ -15,7 +15,7 @@ const debounce = (callback, wait = 30, immediate = true) => {
   }
 }
 
-function checkSlide(e) {
+const checkSlide = () => {
   document.querySelectorAll('.slide-in').forEach((article) => {
     const slideInAt =
         window.scrollY + window.innerHeight - article.offsetHeight / 2,
